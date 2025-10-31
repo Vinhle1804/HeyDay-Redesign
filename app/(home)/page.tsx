@@ -1,4 +1,10 @@
 import Image from "next/image";
+import { Cinzel } from "next/font/google";
+
+const cinzel = Cinzel({
+  subsets: ["latin"],
+  weight: ["400", "500"],
+});
 
 const platform: {
   src: string;
@@ -40,10 +46,10 @@ export default function Home() {
       />
 
       {/* Thanh social bên trái */}
-      <div className="absolute flex flex-col items-center justify-between top-[334px] left-[140px] z-10 w-[142.96px] h-[412px]">
+      <div className="absolute flex items-center z-10 justify-between md:top-[89%] md:left-[25%] md:gap-10  lg:top-[31%] lg:left-[7.29%] lg:w-[7.445%] lg:h-[412px] lg:flex-col ">
         {social.map((item, index) => {
           return (
-            <div key={index} className="relative w-[88px] h-[80px]">
+            <div key={index} className="relative md:w-[88px] md:h-20">
               <Image
                 src={item.src}
                 alt={item.alt}
@@ -56,8 +62,13 @@ export default function Home() {
       </div>
 
       {/* Nội dung trung tâm */}
-      <div className="relative z-20 flex flex-col items-center justify-center text-center">
-        <div className="absolute w-[250px] h-[250px] md:w-[547px] md:h-[547px] top-[62.44px]">
+      <div className="relative z-20 flex flex-col items-center min-h-screen ">
+        <div
+          className="absolute left-1/2 -translate-x-1/2 
+                w-[250px] h-[250px] 
+                md:w-[50%] md:h-[60%] md:top-[-15%] 
+                lg:w-[28.48%] lg:h-[50.6%] lg:top-[5.78%]"
+        >
           <Image
             src="/image/lightball.png"
             alt="light ball"
@@ -67,7 +78,7 @@ export default function Home() {
         </div>
 
         {/* Logo chữ */}
-        <div className="absolute w-[300px] h-[120px] md:w-[690px] md:h-[282px] top-[466.44px]">
+        <div className="absolute w-[300px] h-[120px] md:w-[35.93%] md:h-[26.11%] md:top-[19%] lg:top-[43.18%]">
           <Image
             src="/image/logoheyday.png"
             alt="HeyDay Text Logo"
@@ -76,26 +87,38 @@ export default function Home() {
           />
         </div>
 
-        <div className="absolute flex items-center md:w-[1,451.71px] h-[182.37px] top-[701.44px] ">
-          <p className=" md:text-[56px] font-bold text-black">RISE & CONQUER</p>
+        <div className="absolute flex justify-center items-center md:w-[75.6%] md:h-[16.88%] md:top-[40.94%] lg:top-[64.94%] ">
+          <Image
+            src="/image/light.png"
+            alt="light"
+            fill
+            quality={100}
+            priority
+            className="object-cover z-1"
+          />
+          <p
+            className={`${cinzel.className} text-[56px] text-center font-extrabold md:text-amber-500 lg:text-black  `}
+          >
+            RISE & CONQUER
+          </p>
         </div>
 
         {/* Nút nền tảng */}
-        <div className="absolute top-[850px] flex h-[76px] gap-2">
+        <div className="absolute flex md:top-[78.73%] md:h-[7.03%] md:gap-2 lg:top-[78.73%]">
           {platform.map((item, index) => (
             <div
               key={index}
-              className="flex flex-1 items-center justify-center py-2.5 px-5 gap-2.5"
+              className="flex flex-1 items-center justify-center md:py-2.5 md:px-5 md:gap-2.5"
             >
-              <div className="relative flex items-center justify-center w-[56px] h-[56px]">
+              <div className="relative flex items-center justify-center md:w-14 md:h-14">
                 <Image
                   src={item.src}
                   alt={item.alt}
                   fill
-                  className="object-contain"
+                  className="object-contain brightness-0"
                 />
               </div>
-              <p className="text-black font-bold text-base uppercase whitespace-nowrap">
+              <p className="text-black uppercase whitespace-nowrap md:font-bold md:text-base ">
                 {item.text}
               </p>
             </div>
