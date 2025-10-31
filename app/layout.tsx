@@ -8,8 +8,8 @@ const fontSans = Inter({
   variable: "--font-sans",
 });
 export const metadata: Metadata = {
-  title: "Vinhle",
-  description: "The best restaurant in the world",
+  title: "HeyDay- Redesign",
+  description: "The best game war in the world",
 };
 
 
