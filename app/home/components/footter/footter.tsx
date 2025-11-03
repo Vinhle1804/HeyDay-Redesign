@@ -8,12 +8,12 @@ const cinzel = Cinzel({
   weight: ["400", "500"],
 });
 
-export default function AuctionHouse() {
+export default function Footer() {
   return (
     <div className="relative w-full min-h-screen overflow-hidden bg-black">
       {/* Ảnh nền */}
       <Image
-        src="/image/bg-laudai.png"
+        src="/image/bg-luachay.png"
         alt="HeyDay Background"
         fill
         quality={100}

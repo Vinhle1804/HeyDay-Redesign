@@ -1,7 +1,8 @@
 "use client";
 import { motion } from "framer-motion";
 import { useState } from "react";
-import HomePage from "../home/page";
+import HomePage from "../../home/page";
+import WelcomePage from "./welcome";
 
 export default function Splash() {
   const [showTransition, setShowTransition] = useState(false);
@@ -24,17 +25,18 @@ export default function Splash() {
         transition={{ duration: 0.8 }}
         className="w-full h-full"
       >
-   <HomePage/>
-
+        <HomePage />
       </motion.div>
     );
   }
 
   return (
     <div className="relative w-full h-screen overflow-hidden bg-black">
-      {/*  Trang About */}
-      <div className="absolute inset-0 z-10 cursor-pointer h-50 w-50 text-yellow-300" onClick={handleClick}>
-<h1>click voo day</h1>
+      <div
+        className="absolute inset-0 z-10 cursor-pointer"
+        onClick={handleClick}
+      >
+        <WelcomePage />
       </div>
 
       {/* Hiệu ứng zoom */}

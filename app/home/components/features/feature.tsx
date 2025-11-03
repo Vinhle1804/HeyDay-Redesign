@@ -5,9 +5,9 @@ import Stone from "./stone/stone";
 export default function Features() {
   return (
     <div>
-      <AuctionHouse/>
       <GamefiMechanism/>
       <Stone/>
+      <AuctionHouse/>
     </div>
   )
 }

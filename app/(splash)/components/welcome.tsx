@@ -1,13 +1,13 @@
 import Image from "next/image";
 import { Cinzel } from "next/font/google";
-import { social,platform } from "@/data/data";
+import { platform, social } from "@/data/data";
 
 const cinzel = Cinzel({
   subsets: ["latin"],
   weight: ["400", "500"],
 });
 
-export default function About() {
+export default function WelcomePage() {
   return (
     <div className="relative w-full min-h-screen overflow-hidden bg-black">
       {/* Ảnh nền */}
