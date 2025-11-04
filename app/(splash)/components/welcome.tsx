@@ -1,11 +1,5 @@
 import Image from "next/image";
-import { Cinzel } from "next/font/google";
 import { platform, social } from "@/data/data";
-
-const cinzel = Cinzel({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-});
 
 export default function WelcomePage() {
   return (
@@ -71,9 +65,7 @@ export default function WelcomePage() {
             priority
             className="object-cover z-1"
           />
-          <p
-            className={`${cinzel.className} text-[56px] text-center font-extrabold md:text-amber-500 lg:text-black  `}
-          >
+          <p className=" font-[Cinzel] text-[56px] text-center font-extrabold md:text-amber-500 lg:text-black">
             RISE & CONQUER
           </p>
         </div>
