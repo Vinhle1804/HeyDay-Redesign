@@ -1,6 +1,6 @@
 import About from "./components/about/about";
 import Features from "./components/features/feature";
-import Footer from "./components/footter/footter";
+import Footer from "../../components/footter/footter";
 import Support from "./components/support/support";
 
 export default function HomePage() {
