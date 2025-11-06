@@ -65,3 +65,69 @@ export const gamefiSections = [
     mainImageUrl: '/image/knight1.png'
   },
 ];
+
+export const gameplayData :{
+  title: string;
+  content: string;
+}[] = [
+  {
+    title: "FACTION ALLIANCES",
+    content:
+      "Players explore different lands, gather resources, and expand territories. Each region holds different resources, events, and challenges. Conquering new lands increases power and faction influence."
+  },
+  {
+    title: "BLOODLINE POWERS",
+    content:
+      "Bloodlines grant passive buffs and unique skill paths. Players can unlock deeper potential through artifacts and ancestral missions."
+  },
+  {
+    title: "EXPLORATION AND CONQUES",
+    content:
+      "Players explore different lands, gather resources, and expand territories. Each region holds different resources, events, and challenges. Conquering new lands increases power and faction influence."
+  },
+  {
+    title: "RELIC HUNTING",
+    content:
+      "Discover hidden relics across ancient ruins. These relics enhance character strength and unlock faction bonuses."
+  },
+  {
+    title: "CRAFTING AND BLACKSMITHING",
+    content:
+      "Craft weapons, armor, and consumables. Upgrade and refine gear to enhance combat capability."
+  },
+  {
+    title: "HERO PROGRESSION SYSTEM",
+    content:
+      "Heroes evolve through quests and combat. Skill trees allow customization to fit each player's strategy."
+  },
+  {
+    title: "PVP BATTLES",
+    content:
+      "Combat other players in ranked and unranked modes. Climb seasonal ladders and earn exclusive rewards."
+  },
+  {
+    title: "TERRITORIAL CONTROL",
+    content:
+      "Factions compete for strategic zones. Controlling territories yields rare resources and influence advantages."
+  },
+  {
+    title: "BATTLE ROYALE",
+    content:
+      "Fight in a shrinking battlefield where only one team or hero survives."
+  },
+  {
+    title: "RAIDS AND BOSS BATTLES",
+    content:
+      "Cooperate with players to defeat powerful bosses. Rewards scale with difficulty."
+  },
+  {
+    title: "BOARD GAME",
+    content:
+      "Turn-based strategic mode where factions compete for control on a tactical map."
+  },
+  {
+    title: "OTHERS",
+    content:
+      "Additional side systems and seasonal game modes expand replay value and player engagement."
+  }
+];
