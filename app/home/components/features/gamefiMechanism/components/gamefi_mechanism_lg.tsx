@@ -11,7 +11,7 @@ export default function GamefiMechanismLg() {
     gamefiSections[0];
 
   return (
-    <div className="relative w-full h-[696px]  bg-black">
+    <div className="relative h-[696px]  bg-black">
       <Image
         src="/image/bg2.png"
         alt="HeyDay Background"
@@ -21,7 +21,7 @@ export default function GamefiMechanismLg() {
         className="object-cover z-0 opacity-80"
       />
 
-      <div className="relative z-10 max-w-[1210px] mx-auto">
+      <div className="relative z-10 w-[1128px] mx-auto">
         <div className="relative z-10 flex items-center justify-center w-full h-[418.72px] ">
           <div className="text-white w-[579px] h-[267.36px] top-[65px]">
             <p
@@ -83,7 +83,7 @@ export default function GamefiMechanismLg() {
       <div className="flex justify-center relative -top-[84px] ">
         <div
           className="
-             w-[1441px] h-[331px] 
+             w-full h-[331px] 
              opacity-90 
               z-50"
         >
