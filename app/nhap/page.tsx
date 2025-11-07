@@ -2,6 +2,7 @@ import Image from "next/image";
 import Dropdown from "./component/dropdown";
 import { gameplayData } from "@/data/data";
 import Header from "@/components/header/header";
+import Footer from "@/components/footter/footer";
 
 export default function Nhap() {
   // Chia đôi mảng
@@ -12,7 +13,7 @@ export default function Nhap() {
   return (
 <div>
     <Header/>
-    <div className="relative w-full h-[782px] flex justify-center items-center overflow-hidden">
+    <div className="relative w-full lg:h-[782px] flex justify-center items-center overflow-hidden">
       <Image
         src="/image/bg-khoi.png"
         alt="HeyDay Background"
@@ -22,7 +23,7 @@ export default function Nhap() {
         className="object-cover z-0 opacity-80"
       />
 
-      <div className="relative z-10 flex flex-col items-start gap-6">
+      <div className="relative z-10 flex flex-col  items-start gap-6">
         <div
           className="text-[50px] leading-[72px] uppercase font-normal font-[Cinzel]
           bg-linear-to-b from-[#FEFFBC] to-[#FFC671]
@@ -32,7 +33,7 @@ export default function Nhap() {
         </div>
 
         {/* Grid dropdown */}
-        <div className="flex gap-[16.51px]">
+        <div className=" lg:flex gap-[16.51px]">
           {/* Cột 1 */}
           <div className="flex flex-col gap-4">
             {col1.map((item, index) => (
@@ -49,6 +50,7 @@ export default function Nhap() {
         </div>
       </div>
     </div>
+    {/* <Footer/> */}
 </div>
   );
 }

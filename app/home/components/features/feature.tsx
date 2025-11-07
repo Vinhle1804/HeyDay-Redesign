@@ -4,10 +4,10 @@ import Stone from "./stone/stone";
 
 export default function Features() {
   return (
-    <div>
+    <div id="feature">
       <GamefiMechanism/>
       <Stone/>
-      <AuctionHouse/>
+      {/* <AuctionHouse/> */}
     </div>
   )
 }

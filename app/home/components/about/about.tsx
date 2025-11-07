@@ -1,15 +1,13 @@
 import Image from "next/image";
 import { Cinzel } from "next/font/google";
 import { platform, social } from "@/data/data";
+import Header from "@/components/header/header";
 
-const cinzel = Cinzel({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-});
+
 
 export default function About() {
   return (
-    <div className="relative w-full min-h-screen overflow-hidden bg-black">
+    <div id="about" className="relative w-full min-h-screen overflow-hidden bg-black">
       {/* Ảnh nền */}
       <Image
         src="/image/bg.png"
@@ -19,7 +17,7 @@ export default function About() {
         priority
         className="object-cover z-0"
       />
-
+<Header/>
       {/* Thanh social bên trái */}
       <div className="absolute flex items-center z-10 justify-between md:top-[89%] md:left-[25%] md:gap-10  lg:top-[31%] lg:left-[7.29%] lg:w-[7.445%] lg:h-[412px] lg:flex-col ">
         {social.map((item, index) => {
@@ -72,7 +70,7 @@ export default function About() {
             className="object-cover z-1"
           />
           <p
-            className={`${cinzel.className} text-[56px] text-center font-extrabold md:text-amber-500 lg:text-black  `}
+            className="font-[Cinzel] text-[56px] text-center font-extrabold md:text-amber-500 lg:text-black"
           >
             RISE & CONQUER
           </p>
