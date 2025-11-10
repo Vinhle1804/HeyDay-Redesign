@@ -7,7 +7,7 @@ export default function Features() {
     <div id="feature">
       <GamefiMechanism/>
       <Stone/>
-      {/* <AuctionHouse/> */}
+      <AuctionHouse/>
     </div>
   )
 }

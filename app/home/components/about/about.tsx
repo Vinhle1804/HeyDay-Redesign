@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { Cinzel } from "next/font/google";
 import { platform, social } from "@/data/data";
 import Header from "@/components/header/header";
 

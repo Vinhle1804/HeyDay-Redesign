@@ -1,6 +1,10 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+@import "swiper/css";
+@import "swiper/css/navigation";
+@import "swiper/css/pagination";
+
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
@@ -124,3 +128,9 @@
 html {
   scroll-behavior: smooth;
 }
+
+.container{
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+

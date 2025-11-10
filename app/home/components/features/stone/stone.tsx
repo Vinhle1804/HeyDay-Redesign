@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Stone() {
   return (
-    <div className="relative h-[811px] overflow-hidden bg-black">
+    <div className="relative h-[778px] overflow-hidden bg-black">
       {/* Ảnh nền */}
       <Image
         src="/image/bg3.png"
@@ -13,9 +13,9 @@ export default function Stone() {
         className="object-cover z-0"
       />
 
-      <div className="flex flex-col justify-center items-center">
-        <div className="relative flex justify-center items-start gap-8 w-[1145.02px] h-[345px] top-[66px] mx-auto">
-          <div className="w-[523px] h-[345px] text-white p-2.5">
+      <div className="flex w-full flex-col justify-center items-center container">
+        <div className="relative flex sm:flex-col lg:flex-row  justify-center items-start gap-8  h-[345px] top-[66px] ">
+          <div className="w-full lg:w-1/2 h-[345px] text-white">
             <div className="font-montserrat font-normal text-[19.5px] leading-[32.5px] tracking-normal text-white">
               The Mystical Stone is a rare and powerful item, granting players
               special abilities and exclusive benefits. Unlocking and upgrading
@@ -26,8 +26,7 @@ export default function Stone() {
               essential for those looking to dominate the land of Covenant.
             </div>
           </div>
-
-          <div className="relative w-[603.02px] h-[313px] p-[30px] -top-[25px]">
+        <div className="hidden lg:block  relative w-[603.02px] h-[313px] -top-[65px]">
             <Image
               src="/image/khung-hightlight.png"
               alt="Stone Image"
@@ -35,9 +34,19 @@ export default function Stone() {
               className="object-contain"
             />
           </div>
+         
         </div>
 
-        <div className="relative flex justify-center w-[1118px] h-[333.97px]">
+         <div className="block lg:hidden  relative w-[603.02px] h-[313px] -top-[65px]">
+            <Image
+              src="/image/khung-hightlight.png"
+              alt="Stone Image"
+              fill
+              className="object-contain"
+            />
+          </div>
+
+        <div className="top-[-150px] lg:top-0 relative flex justify-center w-full h-[333.97px] ">
           <div className="relative w-[267.23px] h-[226.43px] top-[79.6px]">
             <Image
               src="/image/blue.png"

@@ -21,7 +21,7 @@ export default function GamefiMechanismLg() {
         className="object-cover z-0 opacity-80"
       />
 
-      <div className="relative z-10 w-[1128px] mx-auto">
+      <div className="relative z-10 container">
         <div className="relative z-10 flex items-center justify-center w-full h-[418.72px] ">
           <div className="text-white w-[579px] h-[267.36px] top-[65px]">
             <p

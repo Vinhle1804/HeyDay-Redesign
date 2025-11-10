@@ -1,96 +1,84 @@
-"use client";
-import { useState } from "react";
 import Image from "next/image";
-import { gamefiSections } from "@/data/data";
 
-export default function GamefiMechanism() {
-  const [activeTitle, setActiveTitle] = useState(gamefiSections[0].title);
-
-  const currentSection =
-    gamefiSections.find((items) => items.title === activeTitle) ||
-    gamefiSections[0];
-
+export default function Stone() {
   return (
-    <div className="relative w-full h-[696px]  bg-black">
+    <div className="relative h-[811px] overflow-hidden bg-black">
+      {/* Ảnh nền */}
       <Image
-        src="/image/bg2.png"
+        src="/image/bg3.png"
         alt="HeyDay Background"
         fill
         quality={100}
         priority
-        className="object-cover z-0 opacity-80"
+        className="object-cover z-0"
       />
 
-      <div className="relative z-10 flex items-center justify-center w-full h-[60.1%] ">
-        <div className="text-white w-[40.2%] h-[38.41%] top-[9.33%]">
-          <p
-            className="text-[50px] leading-[72px] uppercase font-normal font-[Cinzel] 
-             bg-linear-to-b from-[#FEFFBC] to-[#FFC671] 
-             text-transparent bg-clip-text start"
-          >
-            GameFi Mechanism
-          </p>
-
-          <p
-            className="text-[40px] leading-14 uppercase font-normal font-[Cinzel]
-             bg-linear-to-b from-[#FEFFBC] to-[#FFC671]
-             text-transparent bg-clip-text"
-          >
-            {currentSection.title}
-          </p>
-          <p className="text-[24px] leading-10 font-normal font-[Montserrat] text-white">
-            {currentSection.description}
-          </p>
-        </div>
-
-        <div className="relative w-[46.667%] h-[60.16%] top-[2.44%]">
-          <Image
-            src={currentSection.mainImageUrl}
-            alt={currentSection.title}
-            fill
-            className="object-contain transition-opacity"
-          />
-        </div>
-      </div>
-
-      <div className="flex justify-center gap-5 mt-7">
-        {gamefiSections.map((items, index) => (
-          <div
-            key={index}
-            onClick={() => setActiveTitle(items.title)}
-            className={`
-                            relative w-[12.08%] md:h-[16.76%] cursor-pointer 
-                            
-                            ${
-                              activeTitle === items.title
-                                ? " scale-120"
-                                : "opacity-70 hover:opacity-100"
-                            }
-                        `}
-          >
+      <div className="flex w-full flex-col justify-center items-center container">
+        <div className="relative flex sm:flex-col lg:flex-row  justify-center items-start gap-8  h-[345px] top-[66px] ">
+          <div className="w-full lg:w-1/2 h-[345px] text-white">
+            <div className="font-montserrat font-normal text-[19.5px] leading-[32.5px] tracking-normal text-white">
+              The Mystical Stone is a rare and powerful item, granting players
+              special abilities and exclusive benefits. Unlocking and upgrading
+              Mystical Stones can significantly enhance a player’s faction,
+              providing advantages in battles, resource gathering, and strategic
+              planning. These stones hold mystical powers that allow players to
+              access unique abilities unavailable elsewhere, making them
+              essential for those looking to dominate the land of Covenant.
+            </div>
+          </div>
+        <div className="hidden lg:block  relative w-[603.02px] h-[313px] -top-[65px]">
             <Image
-              src={items.src}
-              alt={items.title}
+              src="/image/khung-hightlight.png"
+              alt="Stone Image"
               fill
-              className="object-cover"
+              className="object-contain"
             />
           </div>
-        ))}
-      </div>
+         
+        </div>
 
-      <div className="flex justify-center relative -top-[12.06%] ">
-        <div
-          className="
-             w-full h-[21.964%] 
-             opacity-90 
-              z-50"
-        >
-          <Image
-            src="/image/light.png"
-            alt="Overlay Light"
-            fill
-            className="object-cover"
-          />
+         <div className="block lg:hidden  relative w-[603.02px] h-[313px] -top-[65px]">
+            <Image
+              src="/image/khung-hightlight.png"
+              alt="Stone Image"
+              fill
+              className="object-contain"
+            />
+          </div>
+
+        <div className="top-[-150px] lg:top-0 relative flex justify-center w-full h-[333.97px] ">
+          <div className="relative w-[267.23px] h-[226.43px] top-[79.6px]">
+            <Image
+              src="/image/blue.png"
+              alt="Stone Image"
+              fill
+              className="object-contain"
+            />
+          </div>
+          <div className="relative w-[267.23px] h-[291.58px] top-[59.43px] ">
+            <Image
+              src="/image/orange.png"
+              alt="Stone Image"
+              fill
+              className="object-contain"
+            />
+          </div>
+          <div className="relative w-[336.1px] h-[296.04px] top-[56.51px] ">
+            <Image
+              src="/image/purple.png"
+              alt="Stone Image"
+              fill
+              className="object-contain"
+            />
+          </div>
+          <div className="relative w-[267.23px] h-[221.84px] top-[68.11px] ">
+            <Image
+              src="/image/green.png"
+              alt="Stone Image"
+              fill
+              className="object-contain"
+            />
+          </div>
         </div>
       </div>
     </div>

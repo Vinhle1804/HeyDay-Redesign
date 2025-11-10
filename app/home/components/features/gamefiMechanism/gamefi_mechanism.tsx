@@ -8,7 +8,7 @@ export default function GamefiMechanism() {
 
   const UI = {
     mobile: <GamefiMechanismSm />,
-    tablet: <GamefiMechanismLg />,
+    tablet: <GamefiMechanismSm/>,
     desktop: <GamefiMechanismLg />,
   };
 
