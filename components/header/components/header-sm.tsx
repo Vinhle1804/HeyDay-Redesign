@@ -4,8 +4,10 @@ import { useState } from "react";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import HomeIcon from "@mui/icons-material/Home";
-import SearchIcon from "@mui/icons-material/Search";
 import React from "react";
+import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+import LanguageIcon from '@mui/icons-material/Language';
+import ExtensionIcon from '@mui/icons-material/Extension';
 
 export default function HeaderSm() {
   const [value, setValue] = useState(0);
@@ -18,9 +20,9 @@ export default function HeaderSm() {
 
   const navItems = [
     { label: "About", icon: <HomeIcon />, target: "about" },
-    { label: "Features", icon: <SearchIcon />, target: "feature" },
-    { label: "Support", icon: <SearchIcon />, target: "support" },
-    { label: "Community", icon: <SearchIcon />, target: "footer" },
+    { label: "Features", icon: <ExtensionIcon/>, target: "feature" },
+    { label: "Support", icon: <SupportAgentIcon />, target: "support" },
+    { label: "Community", icon: <LanguageIcon />, target: "footer" },
   ];
 
   return (

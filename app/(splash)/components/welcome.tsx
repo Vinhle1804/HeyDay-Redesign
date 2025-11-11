@@ -1,43 +1,48 @@
 import Image from "next/image";
 import { platform, social } from "@/data/data";
 
-export default function WelcomePage() {
+export default function About() {
   return (
     <div className="relative w-full min-h-screen overflow-hidden bg-black">
-      {/* Ảnh nền */}
-      <Image
-        src="/image/bg.png"
-        alt="HeyDay Background"
-        fill
-        quality={100}
-        priority
-        className="object-cover z-0"
-      />
-
-      {/* Thanh social bên trái */}
-      <div className="absolute flex items-center z-10 justify-between md:top-[89%] md:left-[25%] md:gap-10  lg:top-[31%] lg:left-[7.29%] lg:w-[7.445%] lg:h-[412px] lg:flex-col ">
-        {social.map((item, index) => {
-          return (
-            <div key={index} className="relative md:w-[88px] md:h-20">
-              <Image
-                src={item.src}
-                alt={item.alt}
-                fill
-                className="object-contain"
-              />
-            </div>
-          );
-        })}
+      {/* Background */}
+      <div className="hidden md:block absolute inset-0">
+        <Image
+          src="/image/bg.png"
+          alt="Background Desktop"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+      <div className="block md:hidden absolute inset-0">
+        <Image
+          src="/image/bg-mobile.png"
+          alt="Background Mobile"
+          fill
+          className="object-cover"
+          priority
+        />
       </div>
 
-      {/* Nội dung trung tâm */}
-      <div className="relative z-20 flex flex-col items-center min-h-screen ">
-        <div
-          className="absolute left-1/2 -translate-x-1/2 
-                w-[250px] h-[250px] 
-                md:w-[50%] md:h-[60%] md:top-[-15%] 
-                lg:w-[28.48%] lg:h-[50.6%] lg:top-[5.78%]"
-        >
+
+      {/* Social sidebar - desktop only */}
+      <div className="hidden md:flex absolute z-10 justify-between top-[30%] left-[7%] flex-col gap-6">
+        {social.map((item, index) => (
+          <div key={index} className="relative w-14 h-14">
+            <Image
+              src={item.src}
+              alt={item.alt}
+              fill
+              className="object-contain"
+            />
+          </div>
+        ))}
+      </div>
+
+      {/* Main content */}
+      <div className="relative z-20 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-0">
+        {/* Light ball */}
+        <div className="w-[180px] h-[180px] sm:w-[250px] sm:h-[250px] mb-6 relative">
           <Image
             src="/image/lightball.png"
             alt="light ball"
@@ -46,8 +51,8 @@ export default function WelcomePage() {
           />
         </div>
 
-        {/* Logo chữ */}
-        <div className="absolute w-[300px] h-[120px] md:w-[35.93%] md:h-[26.11%] md:top-[19%] lg:top-[43.18%]">
+        {/* Logo */}
+        <div className="w-[200px] h-[80px] sm:w-[300px] sm:h-[120px] mb-6 relative">
           <Image
             src="/image/logoheyday.png"
             alt="HeyDay Text Logo"
@@ -56,28 +61,28 @@ export default function WelcomePage() {
           />
         </div>
 
-        <div className="absolute flex justify-center items-center md:w-[75.6%] md:h-[16.88%] md:top-[40.94%] lg:top-[64.94%] ">
+        {/* Light overlay + Text */}
+        <div className="relative w-full max-w-[600px] flex flex-col items-center mb-6">
           <Image
             src="/image/light.png"
             alt="light"
-            fill
-            quality={100}
-            priority
-            className="object-cover z-1"
+            width={600}
+            height={150}
+            className="object-contain"
           />
-          <p className=" font-[Cinzel] text-[56px] text-center font-extrabold md:text-amber-500 lg:text-black">
+          <p className="font-[Cinzel] text-[28px] sm:text-[56px] text-center font-extrabold text-amber-500 absolute top-1/2 -translate-y-1/2">
             RISE & CONQUER
           </p>
         </div>
 
-        {/* Nút nền tảng */}
-        <div className="absolute flex md:top-[78.73%] md:h-[7.03%] md:gap-2 lg:top-[78.73%]">
+        {/* Platform buttons */}
+        <div className="flex flex-wrap justify-center gap-4 mt-6 w-full max-w-[600px]">
+
           {platform.map((item, index) => (
-            <div
-              key={index}
-              className="flex flex-1 items-center justify-center md:py-2.5 md:px-5 md:gap-2.5"
-            >
-              <div className="relative flex items-center justify-center md:w-14 md:h-14">
+            
+            <div key={index} className="flex flex-col items-center">
+              
+              <div className="w-12 h-12 relative">
                 <Image
                   src={item.src}
                   alt={item.alt}
@@ -85,12 +90,27 @@ export default function WelcomePage() {
                   className="object-contain brightness-0"
                 />
               </div>
-              <p className="text-black uppercase whitespace-nowrap md:font-bold md:text-base ">
+              <p className="text-white uppercase text-sm font-bold mt-1 text-center">
                 {item.text}
               </p>
             </div>
           ))}
         </div>
+
+
+      </div>
+                    {/* Social sidebar - desktop only */}
+      <div className="flex relative bottom-43 z-10 justify-around  gap-1 md:hidden">
+        {social.map((item, index) => (
+          <div key={index} className="relative w-14 h-14">
+            <Image
+              src={item.src}
+              alt={item.alt}
+              fill
+              className="object-contain"
+            />
+          </div>
+        ))}
       </div>
     </div>
   );
