@@ -1,10 +1,11 @@
 "use client";
 
+import { useState } from "react";
 import BottomNavigation from "@mui/material/BottomNavigation";
 import BottomNavigationAction from "@mui/material/BottomNavigationAction";
 import HomeIcon from "@mui/icons-material/Home";
 import SearchIcon from "@mui/icons-material/Search";
-import { useState } from "react";
+import React from "react";
 
 export default function HeaderSm() {
   const [value, setValue] = useState(0);
@@ -15,38 +16,30 @@ export default function HeaderSm() {
     el.scrollIntoView({ behavior: "smooth" });
   };
 
+  const navItems = [
+    { label: "About", icon: <HomeIcon />, target: "about" },
+    { label: "Features", icon: <SearchIcon />, target: "feature" },
+    { label: "Support", icon: <SearchIcon />, target: "support" },
+    { label: "Community", icon: <SearchIcon />, target: "footer" },
+  ];
+
   return (
     <div className="lg:hidden">
       <BottomNavigation
         showLabels
         value={value}
         onChange={(event, newValue) => setValue(newValue)}
-        className="fixed bottom-4 gap-10 left-4 right-4 !h-24 bg-gradient-to-r from-yellow-200 via-yellow-100 to-yellow-200 rounded-xl shadow-xl border border-yellow-300 z-50"
+        className="fixed bottom-4 left-4 right-4 !h-24 bg-gradient-to-r from-yellow-200 via-yellow-100 to-yellow-200 rounded-xl shadow-xl border border-yellow-300 z-50"
       >
-        <BottomNavigationAction
-          label="About"
-          icon={<HomeIcon className="!text-5xl" />}
-          onClick={() => scrollTo("about")}
-          className="!text-lg !text-black hover:!text-yellow-600"
-        />
-        <BottomNavigationAction
-          label="Features"
-          icon={<SearchIcon className="!text-5xl" />}
-          onClick={() => scrollTo("feature")}
-          className="!text-lg !text-black hover:!text-yellow-600"
-        />
-        <BottomNavigationAction
-          label="Support"
-          icon={<SearchIcon className="!text-5xl" />}
-          onClick={() => scrollTo("support")}
-          className="!text-lg !text-black hover:!text-yellow-600"
-        />
-        <BottomNavigationAction
-          label="Community"
-          icon={<SearchIcon className="!text-5xl" />}
-          onClick={() => scrollTo("footer")}
-          className="!text-lg !text-black hover:!text-yellow-600"
-        />
+        {navItems.map((item, index) => (
+          <BottomNavigationAction
+            key={index}
+            label={item.label}
+            icon={React.cloneElement(item.icon, { className: "!text-5xl" })}
+            onClick={() => scrollTo(item.target)}
+            className="!text-lg !text-black hover:!text-yellow-600"
+          />
+        ))}
       </BottomNavigation>
     </div>
   );
