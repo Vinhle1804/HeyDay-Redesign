@@ -66,6 +66,13 @@ export const gamefiSections = [
   },
 ];
 
+  export const navItems = [
+    { id: "about", label: "About" },
+    { id: "feature", label: "Game features" },
+    { id: "footer", label: "Community" },
+    { id: "support", label: "Support" },
+  ];
+
 export const gameplayData :{
   title: string;
   content: string;

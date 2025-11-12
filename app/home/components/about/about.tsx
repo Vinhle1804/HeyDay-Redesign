@@ -4,7 +4,7 @@ import Header from "@/components/header/header";
 
 export default function About() {
   return (
-    <div className="relative w-full min-h-screen overflow-hidden bg-black">
+    <div id="about" className=" relative w-full min-h-screen overflow-hidden bg-black">
       {/* Background */}
       <div className="hidden md:block absolute inset-0">
         <Image
@@ -101,7 +101,6 @@ export default function About() {
 
 
       </div>
-                    {/* Social sidebar - desktop only */}
       <div className="flex relative bottom-43 z-10 justify-around  gap-1 md:hidden">
         {social.map((item, index) => (
           <div key={index} className="relative w-14 h-14">
