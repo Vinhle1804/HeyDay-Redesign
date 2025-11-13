@@ -101,7 +101,7 @@ export default function About() {
 
 
       </div>
-      <div className="flex relative bottom-43 z-10 justify-around  gap-1 md:hidden">
+       <div className="flex relative bottom-43 z-10 justify-around  gap-1 md:hidden">
         {social.map((item, index) => (
           <div key={index} className="relative w-14 h-14">
             <Image
