@@ -39,7 +39,7 @@ export default function HeaderSm() {
         className={`
           fixed top-0 left-0 z-50 lg:hidden w-full 
           bg-transparent backdrop-blur-md px-5
-          h-10 md:h-25 flex items-center transition-transform duration-300
+          h-20 md:h-25 flex items-center transition-transform duration-300
           ${hide ? "-translate-y-full" : "translate-y-0"}
         `}
       >
@@ -48,7 +48,7 @@ export default function HeaderSm() {
 
         {/* Logo giữa */}
         <div
-          className="mx-auto relative h-10 w-10 md:w-25 md:h-25 cursor-pointer"
+          className="mx-auto relative h-20 w-20 md:w-25 md:h-25 cursor-pointer"
           onClick={() => scrollTo("about")}
         >
           <Image

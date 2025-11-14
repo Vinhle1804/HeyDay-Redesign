@@ -22,7 +22,7 @@ export default function MobileMenu() {
     <Sheet>
       <SheetTrigger asChild>
         <button className="p-3 md:p-4">
-          <MenuIcon className="w-8 h-8 md:w-10 md:h-10 text-white" />
+          <MenuIcon className="w-20 h-20 md:w-20 md:h-20 text-white" />
         </button>
       </SheetTrigger>
 
