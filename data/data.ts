@@ -1,3 +1,4 @@
+import { Children } from "react";
 
  export const platform: {
   src: string;
@@ -48,7 +49,7 @@ export const gamefiSections = [
   },
   {
     src: '/image/pet.png',
-    title: 'PETS & MOUNTS',
+    title: 'PETS',
     description: 'Discover, tame, and evolve unique pets that provide passive buffs and aid in exploration.',
     mainImageUrl: '/image/pet.png'
   },
@@ -66,9 +67,20 @@ export const gamefiSections = [
   },
 ];
 
+export interface INavigateItem {
+  id: string;
+  label: string;
+  children?: INavigateItem[];
+}
+
   export const navItems = [
-    { id: "about", label: "About" },
-    { id: "feature", label: "Game features" },
+    { id: "about", label: "About", },
+    { id: "feature", label: "Game features", children: [
+      { id: "gamefi", label: "gamefi" },
+      { id: "stone", label: "stone" },
+      { id: "house", label: "auction house" },
+
+    ], },
     { id: "footer", label: "Community" },
     { id: "support", label: "Support" },
   ];

@@ -33,7 +33,7 @@ export default function Footer() {
           </div>
 
           {/* Description (đã chỉnh chính tả + đầy đủ câu) */}
-          <p className="text-slate-300 text-sm md:text-base leading-relaxed px-2 font-[Montserrat]">
+          <p className="text-slate-300 text-[19.5px] text-sm md:text-[19.5px] leading-relaxed px-2 font-[Montserrat]">
             Born from the fusion of BEENBOOM Labs’ innovative drive and EBIZWORLD’s expertise in narrative development,
             GameXStudio is where bold ideas and visionary gameplay converge — delivering immersive worlds, compelling
             storytelling, and forward-thinking interactive experiences.
@@ -117,7 +117,7 @@ export default function Footer() {
   {["GAME", "DOWNLOAD NOW", "RESOURCE"].map((title, i) => (
     <div key={i} className="text-center lg:text-left">
       <h3 className="text-amber-500 font-semibold mb-3 tracking-wider">{title}</h3>
-      <ul className="space-y-2 text-slate-300 text-sm">
+      <ul className="space-y-2 text-slate-300 text-[19px]">
         {title === "GAME" &&
           ["About", "Game Features", "News & Updates"].map((item) => (
             <li key={item} className="hover:text-amber-400 cursor-pointer transition-colors">
@@ -127,14 +127,14 @@ export default function Footer() {
 
         {title === "DOWNLOAD NOW" &&
           ["Android", "iOS", "Mac", "PC"].map((item) => (
-            <li key={item} className="hover:text-amber-400 cursor-pointer transition-colors">
+            <li key={item} className="hover:text-amber-400 cursor-pointer transition-colors text-[19px]">
               {item}
             </li>
           ))}
 
         {title === "RESOURCE" &&
           ["Whitepaper", "Terms & Conditions", "Privacy Policy"].map((item) => (
-            <li key={item} className="hover:text-amber-400 cursor-pointer transition-colors">
+            <li key={item} className="hover:text-amber-400 cursor-pointer transition-colors text-[19px]">
               {item}
             </li>
           ))}

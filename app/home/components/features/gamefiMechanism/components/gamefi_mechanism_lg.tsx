@@ -11,7 +11,7 @@ export default function GamefiMechanismLg() {
     gamefiSections[0];
 
   return (
-    <div className="relative h-[696px]  bg-black">
+    <div id="gamefi" className="relative h-[696px]  bg-black">
       <Image
         src="/image/bg2.png"
         alt="HeyDay Background"

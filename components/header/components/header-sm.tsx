@@ -1,16 +1,12 @@
 "use client";
 
-import { useState } from "react";
-import BottomNavigation from "@mui/material/BottomNavigation";
-import BottomNavigationAction from "@mui/material/BottomNavigationAction";
-import HomeIcon from "@mui/icons-material/Home";
-import React from "react";
-import SupportAgentIcon from '@mui/icons-material/SupportAgent';
-import LanguageIcon from '@mui/icons-material/Language';
-import ExtensionIcon from '@mui/icons-material/Extension';
+import { useState, useEffect } from "react";
+import MobileMenu from "./mobile-menu";
+import Image from "next/image";
 
 export default function HeaderSm() {
-  const [value, setValue] = useState(0);
+  const [hide, setHide] = useState(false);
+  const [lastScrollY, setLastScrollY] = useState(0);
 
   const scrollTo = (id: string) => {
     const el = document.getElementById(id);
@@ -18,31 +14,58 @@ export default function HeaderSm() {
     el.scrollIntoView({ behavior: "smooth" });
   };
 
-  const navItems = [
-    { label: "About", icon: <HomeIcon />, target: "about" },
-    { label: "Features", icon: <ExtensionIcon/>, target: "feature" },
-    { label: "Support", icon: <SupportAgentIcon />, target: "support" },
-    { label: "Community", icon: <LanguageIcon />, target: "footer" },
-  ];
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentY = window.scrollY;
+
+      // Scroll xuống → ẩn
+      if (currentY > lastScrollY && currentY > 80) {
+        setHide(true);
+      } else {
+        // Scroll lên → hiện
+        setHide(false);
+      }
+
+      setLastScrollY(currentY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
 
   return (
-    <div className="lg:hidden">
-      <BottomNavigation
-        showLabels
-        value={value}
-        onChange={(event, newValue) => setValue(newValue)}
-        className="fixed bottom-4 left-4 right-4 !h-24 bg-gradient-to-r from-yellow-200 via-yellow-100 to-yellow-200 rounded-xl shadow-xl border border-yellow-300 z-50"
+    <header className="relative">
+      <div
+        className={`
+          fixed top-0 left-0 z-50 lg:hidden w-full 
+          bg-transparent backdrop-blur-md px-5
+          h-10 md:h-25 flex items-center transition-transform duration-300
+          ${hide ? "-translate-y-full" : "translate-y-0"}
+        `}
       >
-        {navItems.map((item, index) => (
-          <BottomNavigationAction
-            key={index}
-            label={item.label}
-            icon={React.cloneElement(item.icon, { className: "!text-5xl" })}
-            onClick={() => scrollTo(item.target)}
-            className="!text-lg !text-black hover:!text-yellow-600"
+        {/* Cột trái: để trống */}
+        <div className="w-10 md:w-25"></div>
+
+        {/* Logo giữa */}
+        <div
+          className="mx-auto relative h-10 w-10 md:w-25 md:h-25 cursor-pointer"
+          onClick={() => scrollTo("about")}
+        >
+          <Image
+            src="/image/logo.png"
+            alt="Logo"
+            fill
+            quality={100}
+            priority
+            className="object-contain"
           />
-        ))}
-      </BottomNavigation>
-    </div>
+        </div>
+
+        {/* Menu bên phải */}
+        <div className="w-auto flex justify-end items-center">
+          <MobileMenu />
+        </div>
+      </div>
+    </header>
   );
 }

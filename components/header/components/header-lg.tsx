@@ -59,12 +59,13 @@ export default function HeaderLg() {
   }, []);
 
   return (
-    <header
+    <header className="relative">
+    <div
       onMouseEnter={() => setHide(false)}
       onMouseLeave={() => setHide(true)}
       className={`fixed top-0 pt-[33px] left-0 w-full h-[125px] flex justify-center items-center backdrop-blur-md z-50 transition-transform duration-300 ${
         hide ? "-translate-y-[90%]" : "translate-y-0"
-      }`}
+      } hidden md:block`}
     >
       <div className="flex container justify-between items-center gap-10">
         {/* Logo */}
@@ -81,7 +82,6 @@ export default function HeaderLg() {
             className="object-contain"
           />
         </div>
-
         {/* Nav */}
         <div className="flex justify-center items-center w-[680px] h-full gap-[33px] text-transparent bg-clip-text bg-gradient-to-b from-[#FEFFBC] to-[#FFC671]">
           {navItems.map((item) => (
@@ -117,7 +117,6 @@ export default function HeaderLg() {
             </div>
           ))}
         </div>
-
         {/* Button */}
         <div className="relative w-[216px] h-[62.41px] flex items-center justify-center">
           <Image
@@ -141,6 +140,9 @@ export default function HeaderLg() {
           </p>
         </div>
       </div>
+    </div>
+
     </header>
+
   );
 }

@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function AuctionHouse() {
   return (
-    <div className="relative h-[950px] lg:h-[878px] overflow-hidden bg-black">
+    <div id="" className="relative h-[950px] lg:h-[878px] overflow-hidden bg-black">
       <div className="flex w-full flex-col justify-center items-center container">
-        <div className="container relative text-white w-[1136px] h-[267.36px] top-[50px]">
+        <div className="container text-center lg:text-start relative text-white w-[1136px] h-[267.36px] top-[50px]">
           <p
             className="text-[40px] md:text-[50px] leading-[72px] uppercase font-normal font-[Cinzel] 
              bg-linear-to-b from-[#FEFFBC] to-[#FFC671] 
@@ -12,7 +12,7 @@ export default function AuctionHouse() {
           >
             Auction House
           </p>
-          <div className="relative  md:w-[370px] h-[35px] mt-4 mb-[52px]">
+          <div className="hidden lg:block relative items-center justify-center md:w-[370px] h-[35px] mt-4 mb-[52px]">
             <Image
               src="/image/kechanvector.png"
               alt="HeyDay Background"

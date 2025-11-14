@@ -9,7 +9,10 @@ export default function Nhap() {
   const col2 = gameplayData.slice(midpoint);
 
   return (
-    <div id="support" className="relative w-full py-6 flex justify-center items-center overflow-hidden">
+    <div
+      id="support"
+      className="relative w-full py-6 flex justify-center items-center overflow-hidden"
+    >
       <Image
         src="/image/bg-khoi.png"
         alt="HeyDay Background"
@@ -20,12 +23,14 @@ export default function Nhap() {
       />
 
       <div className="relative z-10 flex flex-col  items-start gap-6 container">
-        <div
-          className="text-[50px] leading-[72px] uppercase font-normal font-[Cinzel]
+        <div className="relative container z-10 flex flex-col items-center  gap-6">
+          <div
+            className="text-[50px] leading-[72px] uppercase font-normal font-[Cinzel]
           bg-linear-to-b from-[#FEFFBC] to-[#FFC671]
-          text-transparent bg-clip-text"
-        >
-          Game play
+          text-transparent bg-clip-text text-center lg:text-left" 
+          >
+            Game play
+          </div>
         </div>
 
         {/* Grid dropdown */}

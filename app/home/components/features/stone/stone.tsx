@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Stone() {
   return (
-    <div className="relative w-full overflow-hidden bg-black">
+    <div id="stone" className="relative w-full overflow-hidden bg-black">
       {/* Ảnh nền */}
       <Image
         src="/image/bg3.png"

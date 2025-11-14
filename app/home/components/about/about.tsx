@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { platform, social } from "@/data/data";
-import Header from "@/components/header/header";
+
 
 export default function About() {
   return (
@@ -25,7 +25,6 @@ export default function About() {
         />
       </div>
 
-      <Header />
 
       {/* Social sidebar - desktop only */}
       <div className="hidden md:flex absolute z-10 justify-between top-[30%] left-[7%] flex-col gap-6">
