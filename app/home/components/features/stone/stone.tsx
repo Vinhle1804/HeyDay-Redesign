@@ -16,7 +16,7 @@ export default function Stone() {
       <div className="flex w-full flex-col justify-center items-center container">
         <div className="relative flex sm:flex-col lg:flex-row  justify-center items-start gap-8  h-[345px] top-[66px] ">
           <div className="w-full lg:w-1/2 h-[345px] text-white">
-            <div className="font-montserrat font-normal text-[19.5px] leading-[32.5px] tracking-normal text-white">
+            <div className="font-montserrat font-normal text-[14px] sm:text-[19.5px] leading-[32.5px] tracking-normal text-white text-center">
               The Mystical Stone is a rare and powerful item, granting players
               special abilities and exclusive benefits. Unlocking and upgrading
               Mystical Stones can significantly enhance a player’s faction,
@@ -44,14 +44,14 @@ export default function Stone() {
             </div>
           </div>
         </div>
-        <div className="  block lg:hidden relative top-[100px] w-[400px] h-[200px]  md:w-[603px] md:h-[313px] md:-top-[50px] ">
+        <div className="  block lg:hidden relative top-[100px] w-[300px] h-[150px]  sm:w-[603px] sm:h-[313px] md:-top-[50px] ">
           <Image
             src="/image/khung-hightlight.png"
             alt="Stone Image"
             fill
             className="object-contain z-0"
           />
-          <div className="absolute inset-0 flex flex-col justify-center text-white px-4 sm:px-6 md:px-10 text-[12px] sm:text-[16px] md:text-[18px] leading-5 sm:leading-6 md:leading-7">
+          <div className="absolute inset-0 flex flex-col justify-center text-white px-4 sm:px-6 md:px-10 text-[10px] sm:text-[16px] md:text-[18px] leading-5 sm:leading-6 md:leading-7">
             <ul className="list-disc pl-4">
               <li>Grants exclusive abilities and buffs to factions.</li>
               <li>Enhances resource gathering and combat effectiveness.</li>

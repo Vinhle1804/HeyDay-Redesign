@@ -30,7 +30,7 @@ export default function GamefiMechanism() {
 
 
               {/* Nội dung */}
-              <div className="relative z-10 text-center max-w-[700px] lg:max-w-[900px] px-6 lg:px-12">
+              <div className="relative z-10 text-center max-w-[700px] lg:max-w-[900px] px-50 lg:px-12">
                 
                 <h2   className="text-[50px] leading-[72px] uppercase font-normal font-[Cinzel] 
              bg-linear-to-b from-[#FEFFBC] to-[#FFC671] 

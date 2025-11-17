@@ -53,7 +53,7 @@ export default function Dropdown({ title, content }: DropdownProps) {
           </span>
 
           <span
-            className={`relative w-[33px] h-[31px] transition-transform ${
+            className={`hidden sm:block relative w-[33px] h-[31px] transition-transform ${
               open ? "rotate-180" : ""
             }`}
           >

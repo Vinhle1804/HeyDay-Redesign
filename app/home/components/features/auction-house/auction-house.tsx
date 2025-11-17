@@ -4,9 +4,9 @@ export default function AuctionHouse() {
   return (
     <div id="" className="relative h-[950px] lg:h-[878px] overflow-hidden bg-black">
       <div className="flex w-full flex-col justify-center items-center container">
-        <div className="container text-center lg:text-start relative text-white w-[1136px] h-[267.36px] top-[50px]">
+        <div className="container text-center lg:text-start relative text-white w-[1136px] h-[267.36px] top-5 sm:top-[50px]">
           <p
-            className="text-[40px] md:text-[50px] leading-[72px] uppercase font-normal font-[Cinzel] 
+            className="text-[30px] sm:text-[50px] leading-[72px] uppercase font-normal font-[Cinzel] 
              bg-linear-to-b from-[#FEFFBC] to-[#FFC671] 
              text-transparent bg-clip-text start"
           >
@@ -24,7 +24,7 @@ export default function AuctionHouse() {
           </div>
         </div>
 
-        <div className="container relative flex sm:flex-col lg:flex-row  justify-center items-start gap-8  h-[239px] top-[-60px]  md:top-[-50px] lg:top-0 ">
+        <div className="container relative flex sm:flex-col lg:flex-row  text-center justify-center items-start gap-8  h-[239px] top-[-150px]  sm:top-[-50px] lg:top-0 ">
           <div className="w-full lg:w-1/2 h-[345px] text-white">
             <div className="font-montserrat font-normal text-[19.5px] leading-[32.5px] tracking-normal text-white">
               The Auction House in Heyday: Rise of Empires is a dynamic
@@ -55,14 +55,16 @@ export default function AuctionHouse() {
           </div>
         </div>
 
-     <div className="  block lg:hidden relative top-[100px] w-[400px] h-[200px]  md:w-[603px] md:h-[313px] md:-top-[50px] ">
+        <div className="  block lg:hidden relative top-[170px] w-[300px] h-[150px]  sm:w-[603px] sm:h-[313px] md:-top-[50px] ">
+
           <Image
             src="/image/khung-hightlight.png"
             alt="Stone Image"
             fill
             className="object-contain z-0"
           />
-          <div className="absolute inset-0 flex flex-col justify-center text-white px-4 sm:px-6 md:px-10 text-[12px] sm:text-[16px] md:text-[18px] leading-5 sm:leading-6 md:leading-7">
+          <div className="absolute inset-0 flex flex-col justify-center text-white px-4 sm:px-6 md:px-10 text-[10px] sm:text-[16px] md:text-[18px] leading-5 sm:leading-6 md:leading-7">
+         
             <ul className="list-disc pl-4">
               <li>Grants exclusive abilities and buffs to factions.</li>
               <li>Enhances resource gathering and combat effectiveness.</li>

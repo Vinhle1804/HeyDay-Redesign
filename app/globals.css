@@ -139,3 +139,15 @@ html {
 }
 
 
+@layer utilities {
+  .show-from-30 {
+    display: none;
+  }
+
+  @media (min-width: 30rem) {
+    .show-from-30 {
+      display: block;
+    }
+  }
+}
+

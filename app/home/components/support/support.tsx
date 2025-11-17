@@ -25,7 +25,7 @@ export default function Nhap() {
       <div className="relative z-10 flex flex-col  items-start gap-6 container">
         <div className="relative container z-10 flex flex-col items-center  gap-6">
           <div
-            className="text-[50px] leading-[72px] uppercase font-normal font-[Cinzel]
+            className="text-[20px] sm:text-[50px] leading-[72px] uppercase font-normal font-[Cinzel]
           bg-linear-to-b from-[#FEFFBC] to-[#FFC671]
           text-transparent bg-clip-text text-center lg:text-left" 
           >
