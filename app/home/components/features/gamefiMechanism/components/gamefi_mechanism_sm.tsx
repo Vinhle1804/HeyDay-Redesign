@@ -32,12 +32,12 @@ export default function GamefiMechanism() {
               {/* Nội dung */}
               <div className="relative z-10 text-center max-w-[700px] lg:max-w-[900px] px-50 lg:px-12">
                 
-                <h2   className="text-[50px] leading-[72px] uppercase font-normal font-[Cinzel] 
+                <h2   className="text-[32px] leading-[72px] uppercase font-normal font-[Cinzel] 
              bg-linear-to-b from-[#FEFFBC] to-[#FFC671] 
              text-transparent bg-clip-text start">
                   {item.title}
                 </h2>
-                <p  className="text-[24px] leading-10 font-normal font-[Montserrat] text-white">
+                <p  className="text-[15px] leading-10 font-normal font-[Montserrat] text-white">
                   {item.description}
                 </p>
 

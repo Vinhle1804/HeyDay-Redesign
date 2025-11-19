@@ -1,22 +1,14 @@
 import Image from "next/image";
 import { platform, social } from "@/data/data";
 
-export default function About() {
+
+export default function Splash() {
   return (
-    <div className="relative w-full min-h-screen overflow-hidden bg-black">
-      {/* Background */}
-      <div className="hidden md:block absolute inset-0">
+    <div id="about" className=" relative w-full min-h-screen overflow-hidden bg-black">
+
+      <div className=" absolute inset-0">
         <Image
-          src="/image/bg.png"
-          alt="Background Desktop"
-          fill
-          className="object-cover"
-          priority
-        />
-      </div>
-      <div className="block md:hidden absolute inset-0">
-        <Image
-          src="/image/bg-mobile.png"
+          src="/image/bg-mobile3.png"
           alt="Background Mobile"
           fill
           className="object-cover"
@@ -42,7 +34,7 @@ export default function About() {
       {/* Main content */}
       <div className="relative z-20 flex flex-col items-center justify-center min-h-screen px-4 sm:px-6 lg:px-0">
         {/* Light ball */}
-        <div className="w-[180px] h-[180px] sm:w-[250px] sm:h-[250px] mb-6 relative">
+        <div className="hidden md:block w-[180px] h-[180px] sm:w-[250px] sm:h-[250px] mb-6 relative">
           <Image
             src="/image/lightball.png"
             alt="light ball"
@@ -52,7 +44,7 @@ export default function About() {
         </div>
 
         {/* Logo */}
-        <div className="w-[200px] h-[80px] sm:w-[300px] sm:h-[120px] mb-6 relative">
+        <div className="w-[200px] h-20 sm:w-[300px] sm:h-[120px] mb-6 relative">
           <Image
             src="/image/logoheyday.png"
             alt="HeyDay Text Logo"
@@ -76,7 +68,7 @@ export default function About() {
         </div>
 
         {/* Platform buttons */}
-        <div className="flex flex-wrap justify-center gap-4 mt-6 w-full max-w-[600px]">
+        <div className="flex flex-wrap justify-center gap-0  md:gap-4 mt-6 w-full max-w-[600px] ">
 
           {platform.map((item, index) => (
             
@@ -90,7 +82,7 @@ export default function About() {
                   className="object-contain brightness-0"
                 />
               </div>
-              <p className="text-white uppercase text-sm font-bold mt-1 text-center">
+              <p className="hidden md:block text-white uppercase text-sm font-bold mt-1 text-center">
                 {item.text}
               </p>
             </div>
@@ -99,8 +91,7 @@ export default function About() {
 
 
       </div>
-                    {/* Social sidebar - desktop only */}
-      <div className="flex relative bottom-43 z-10 justify-around  gap-1 md:hidden">
+       <div className="flex relative bottom-35 z-10 justify-around  gap-1 md:hidden">
         {social.map((item, index) => (
           <div key={index} className="relative w-14 h-14">
             <Image

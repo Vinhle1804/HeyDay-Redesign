@@ -2,11 +2,11 @@ import Image from "next/image";
 
 export default function AuctionHouse() {
   return (
-    <div id="" className="relative h-[950px] lg:h-[878px] overflow-hidden bg-black">
+    <div id="" className="relative h-[800px] lg:h-[878px] overflow-hidden bg-black">
       <div className="flex w-full flex-col justify-center items-center container">
         <div className="container text-center lg:text-start relative text-white w-[1136px] h-[267.36px] top-5 sm:top-[50px]">
           <p
-            className="text-[30px] sm:text-[50px] leading-[72px] uppercase font-normal font-[Cinzel] 
+            className="text-[28px] sm:text-[50px] leading-[72px] uppercase font-normal font-[Cinzel] 
              bg-linear-to-b from-[#FEFFBC] to-[#FFC671] 
              text-transparent bg-clip-text start"
           >
@@ -26,7 +26,7 @@ export default function AuctionHouse() {
 
         <div className="container relative flex sm:flex-col lg:flex-row  text-center justify-center items-start gap-8  h-[239px] top-[-150px]  sm:top-[-50px] lg:top-0 ">
           <div className="w-full lg:w-1/2 h-[345px] text-white">
-            <div className="font-montserrat font-normal text-[19.5px] leading-[32.5px] tracking-normal text-white">
+            <div className="font-montserrat font-normal text-[15px] leading-[32.5px] tracking-normal text-white">
               The Auction House in Heyday: Rise of Empires is a dynamic
               marketplace where players can bid on rare items, including NFTs
               and Mystical Stones. It’s a place for strategic trading, allowing
@@ -55,7 +55,7 @@ export default function AuctionHouse() {
           </div>
         </div>
 
-        <div className="  block lg:hidden relative top-[170px] w-[300px] h-[150px]  sm:w-[603px] sm:h-[313px] md:-top-[50px] ">
+        <div className="  block lg:hidden relative top-[60px] w-[300px] h-[150px]  sm:w-[603px] sm:h-[313px] md:-top-[50px] ">
 
           <Image
             src="/image/khung-hightlight.png"
@@ -74,7 +74,7 @@ export default function AuctionHouse() {
           </div>
         </div>
 
-        <div className="top-[-90px] md:top-[-190px] lg:top-0 relative flex justify-center w-full h-[333.97px] ">
+        <div className="top-[-190px] md:top-[-190px] lg:top-0 relative flex justify-center w-full h-[333.97px] ">
           <Image
             src="/image/bg-laudai.png"
             alt="HeyDay Background"
