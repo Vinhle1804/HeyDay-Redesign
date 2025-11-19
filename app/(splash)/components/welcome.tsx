@@ -5,8 +5,17 @@ import { platform, social } from "@/data/data";
 export default function Splash() {
   return (
     <div id="about" className=" relative w-full min-h-screen overflow-hidden bg-black">
-
-      <div className=" absolute inset-0">
+      {/* Background */}
+      <div className="hidden md:block absolute inset-0">
+        <Image
+          src="/image/bg.png"
+          alt="Background Desktop"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+      <div className="block md:hidden absolute inset-0">
         <Image
           src="/image/bg-mobile3.png"
           alt="Background Mobile"
